@@ -18,7 +18,7 @@ const PicOfTheDay = () => {
 
   return (
     <div>
-      <h2>yess</h2>
+      <img src={nasaData.url} alt="Pic of the Day" />
     </div>
   );
 };
