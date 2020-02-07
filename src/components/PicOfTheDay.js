@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Explanation from "./Explanation";
 
 const PicOfTheDay = () => {
   const [nasaData, setNasaData] = useState({});
@@ -7,7 +8,7 @@ const PicOfTheDay = () => {
   function fetchAPI() {
     axios
       .get(
-        "https://api.nasa.gov/planetary/apod?api_key=F8dSoRxUrpecxL46FCau6nMt5PUmynrEb5ox9uUr&date=2020-02-06"
+        "https://api.nasa.gov/planetary/apod?api_key=F8dSoRxUrpecxL46FCau6nMt5PUmynrEb5ox9uUr&date=2020-02-06&"
       )
       .then(response => setNasaData(response.data))
       .catch(error => console.error(error));
@@ -19,6 +20,7 @@ const PicOfTheDay = () => {
   return (
     <div>
       <img src={nasaData.url} alt="Pic of the Day" />
+      <Explanation />
     </div>
   );
 };
