@@ -13,7 +13,7 @@ function App() {
     p {
       font-size: 18px;
       font-family: monospace;
-      line-height: 25px;
+      line-height: 28px;
       color: #be5e0a;
     }
     a {

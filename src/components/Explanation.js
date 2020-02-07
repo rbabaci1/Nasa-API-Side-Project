@@ -1,10 +1,16 @@
 import React from "react";
+import styled from "styled-components";
 
 const Explanation = ({ explanation }) => {
+  const Define = styled.span`
+    color: black;
+    font-size: 20px;
+  `;
+
   return (
     <div>
       <p>
-        <span style={{ fontWeight: "bold" }}>Explanation: </span>
+        <Define style={{ fontWeight: "bold" }}>Explanation: </Define>
         {explanation}
       </p>
     </div>
