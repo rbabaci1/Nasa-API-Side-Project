@@ -17,8 +17,11 @@ const Image = styled.img`
 `;
 
 const PicOfTheDay = () => {
+  var today = new Date();
+  today = today.toISOString().replace(/T.+/g, "");
+
   const [nasaData, setNasaData] = useState({});
-  const [dateInput, setDateInput] = useState("2020-02-06");
+  const [dateInput, setDateInput] = useState(today);
 
   function getData() {
     axios
