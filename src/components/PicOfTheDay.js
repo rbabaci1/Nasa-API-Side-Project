@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Explanation from "./Explanation";
 import TitleAndCopyright from "./Title&copyright";
+import DateInput from "./DateInput";
+
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -16,21 +18,21 @@ const Image = styled.img`
 
 const PicOfTheDay = () => {
   const [nasaData, setNasaData] = useState({});
+  const [dateInput, setDateInput] = useState("2020-02-06");
 
   function getData() {
     axios
       .get(
-        "https://api.nasa.gov/planetary/apod?api_key=F8dSoRxUrpecxL46FCau6nMt5PUmynrEb5ox9uUr&date=2020-02-06&"
+        `https://api.nasa.gov/planetary/apod?api_key=F8dSoRxUrpecxL46FCau6nMt5PUmynrEb5ox9uUr&date=${dateInput}`
       )
       .then(response => setNasaData(response.data))
       .catch(error => console.error(error));
   }
-
-  useEffect(getData, []);
-  console.log(nasaData);
+  useEffect(getData, [dateInput]);
 
   return (
     <Container>
+      <DateInput setDate={setDateInput} />
       <Image src={nasaData.url} alt="Pic of the Day" />
       <TitleAndCopyright
         title={nasaData.title}
