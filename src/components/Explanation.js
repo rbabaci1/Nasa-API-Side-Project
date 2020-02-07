@@ -4,7 +4,7 @@ const Explanation = ({ explanation }) => {
   return (
     <div>
       <p>
-        <span>Explanation: </span>
+        <span style={{ fontWeight: "bold" }}>Explanation: </span>
         {explanation}
       </p>
     </div>

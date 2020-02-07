@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Explanation from "./Explanation";
+import TitleAndCopyright from "./Title&copyright";
 
 const PicOfTheDay = () => {
   const [nasaData, setNasaData] = useState({});
@@ -20,6 +21,10 @@ const PicOfTheDay = () => {
   return (
     <div>
       <img src={nasaData.url} alt="Pic of the Day" />
+      <TitleAndCopyright
+        title={nasaData.title}
+        copyright={nasaData.copyright}
+      />
       <Explanation explanation={nasaData.explanation} />
     </div>
   );
