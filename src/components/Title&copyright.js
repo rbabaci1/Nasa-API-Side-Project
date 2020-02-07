@@ -1,8 +1,22 @@
 import React from "react";
+import styled from "styled-components";
 
 const TitleAndCopyright = ({ title, copyright }) => {
+  const Wrapper = styled.div`
+    padding: 40px 0;
+    font-family: Monaco;
+
+    h3 {
+      font-size: 25px;
+      padding: 15px 0;
+    }
+    h4 {
+      font-size: 18px;
+    }
+  `;
+
   return (
-    <div>
+    <Wrapper>
       <h3>{title}</h3>
       <h4>
         Image Credit & <span>Copyright: </span>
@@ -10,7 +24,7 @@ const TitleAndCopyright = ({ title, copyright }) => {
           {copyright}
         </a>
       </h4>
-    </div>
+    </Wrapper>
   );
 };
 

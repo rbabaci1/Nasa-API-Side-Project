@@ -16,6 +16,13 @@ function App() {
       line-height: 25px;
       color: #be5e0a;
     }
+    a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      color: red;
+    }
   `;
 
   return (

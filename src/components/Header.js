@@ -10,14 +10,12 @@ const Header = () => {
     h1 {
       font-family: Monaco;
       color: #595969;
+      padding-bottom: 30px;
     }
 
-    a {
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      color: red;
+    #date {
+      padding: 30px 0 5px 0;
+      color: #168a86;
     }
   `;
 
@@ -32,7 +30,7 @@ const Header = () => {
         featured, along with a brief explanation written by a professional
         astronomer.
       </p>
-      <p>{"2020 February 6"}</p>
+      <p id="date">{"February 6 2020"}</p>
     </Intro>
   );
 };
