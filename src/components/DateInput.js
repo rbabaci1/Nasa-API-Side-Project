@@ -11,6 +11,7 @@ const Input = styled.input`
 const DateInput = ({ setDate }) => {
   return (
     <div>
+      <h4>Choose a Date</h4>
       <Input
         type="date"
         placeholder="Search"
