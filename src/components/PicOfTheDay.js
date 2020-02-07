@@ -6,7 +6,7 @@ import TitleAndCopyright from "./Title&copyright";
 const PicOfTheDay = () => {
   const [nasaData, setNasaData] = useState({});
 
-  function fetchAPI() {
+  function getData() {
     axios
       .get(
         "https://api.nasa.gov/planetary/apod?api_key=F8dSoRxUrpecxL46FCau6nMt5PUmynrEb5ox9uUr&date=2020-02-06&"
@@ -15,7 +15,7 @@ const PicOfTheDay = () => {
       .catch(error => console.error(error));
   }
 
-  useEffect(fetchAPI, []);
+  useEffect(getData, []);
   console.log(nasaData);
 
   return (

@@ -4,11 +4,18 @@ import PicOfTheDay from "./components/PicOfTheDay";
 import styled from "styled-components";
 
 function App() {
+  const App = styled.div`
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+  `;
+
   return (
-    <div>
+    <App>
       <Header />
       <PicOfTheDay />
-    </div>
+    </App>
   );
 }
 
