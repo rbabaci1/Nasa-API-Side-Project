@@ -36,11 +36,14 @@ const PicOfTheDay = () => {
   return (
     <Container>
       <DateInput setDate={setDateInput} />
+
       <Image src={nasaData.url} alt="Pic of the Day" />
+
       <TitleAndCopyright
         title={nasaData.title}
         copyright={nasaData.copyright}
       />
+
       <Explanation explanation={nasaData.explanation} />
     </Container>
   );
