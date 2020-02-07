@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const Explanation = ({ explanation }) => {
-  const Define = styled.span`
-    color: black;
-    font-size: 20px;
-  `;
+const Define = styled.span`
+  color: black;
+  font-size: 20px;
+`;
 
+const Explanation = ({ explanation }) => {
   return (
     <div>
       <p>

@@ -1,24 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 
+const Intro = styled.div`
+  width: 80%;
+  margin: 20px auto;
+  border-bottom: 3px solid #8a8584;
+
+  h1 {
+    font-family: Monaco;
+    color: #595969;
+    padding-bottom: 30px;
+  }
+
+  #date {
+    padding: 30px 0 5px 0;
+    color: #168a86;
+  }
+`;
+
 const Header = () => {
-  const Intro = styled.div`
-    width: 80%;
-    margin: 20px auto;
-    border-bottom: 3px solid #8a8584;
-
-    h1 {
-      font-family: Monaco;
-      color: #595969;
-      padding-bottom: 30px;
-    }
-
-    #date {
-      padding: 30px 0 5px 0;
-      color: #168a86;
-    }
-  `;
-
   return (
     <Intro>
       <h1>Astronomy Picture of the Day!</h1>

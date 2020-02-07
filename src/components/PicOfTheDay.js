@@ -4,6 +4,16 @@ import Explanation from "./Explanation";
 import TitleAndCopyright from "./Title&copyright";
 import styled from "styled-components";
 
+const Container = styled.div`
+  width: 80%;
+  margin: 40px auto;
+`;
+const Image = styled.img`
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: #2f2f34 0px 0px 10px;
+`;
+
 const PicOfTheDay = () => {
   const [nasaData, setNasaData] = useState({});
 
@@ -18,16 +28,6 @@ const PicOfTheDay = () => {
 
   useEffect(getData, []);
   console.log(nasaData);
-
-  const Container = styled.div`
-    width: 80%;
-    margin: 40px auto;
-  `;
-  const Image = styled.img`
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: #2f2f34 0px 0px 10px;
-  `;
 
   return (
     <Container>
