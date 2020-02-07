@@ -11,16 +11,13 @@ const Header = () => {
       font-family: Monaco;
       color: #595969;
     }
-    p {
-      font-size: 18px;
-      font-family: monospace;
-      line-height: 25px;
-      color: #be5e0a;
 
-      a {
-        text-decoration: none;
-        font-weight: bold;
-      }
+    a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      color: red;
     }
   `;
 

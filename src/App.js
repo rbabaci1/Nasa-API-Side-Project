@@ -9,6 +9,13 @@ function App() {
     margin: auto;
     text-align: center;
     padding: 15px;
+
+    p {
+      font-size: 18px;
+      font-family: monospace;
+      line-height: 25px;
+      color: #be5e0a;
+    }
   `;
 
   return (
