@@ -20,7 +20,7 @@ const PicOfTheDay = () => {
   return (
     <div>
       <img src={nasaData.url} alt="Pic of the Day" />
-      <Explanation />
+      <Explanation explanation={nasaData.explanation} />
     </div>
   );
 };
