@@ -43,8 +43,8 @@ const PicOfTheDay = () => {
       <DateInput setDate={setDateInput} />
       <Image src={nasaData.url} alt="Pic of the Day" />
 
-      <div style={{ marginTop: "5px" }}>
-        <Button onClick={toggle} style={{ marginBottom: "10px" }}>
+      <div>
+        <Button onClick={toggle} style={{ marginTop: "10px" }}>
           More Info
         </Button>
         <Collapse isOpen={isOpen}>
