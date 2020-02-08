@@ -5,13 +5,15 @@ import TitleAndCopyright from "./Title&copyright";
 import DateInput from "./DateInput";
 
 import styled from "styled-components";
+import { Collapse, Button, CardBody, Card } from "reactstrap";
 
 const Container = styled.div`
   width: 80%;
-  margin: 40px auto;
+  margin: 20px auto;
 `;
 const Image = styled.img`
-  width: 100%;
+  width: 650px;
+  height: 450px;
   border-radius: 20px;
   box-shadow: #2f2f34 0px 0px 10px;
 `;
@@ -22,6 +24,9 @@ const PicOfTheDay = () => {
 
   const [nasaData, setNasaData] = useState({});
   const [dateInput, setDateInput] = useState(today);
+
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
 
   function getData() {
     axios
@@ -36,15 +41,27 @@ const PicOfTheDay = () => {
   return (
     <Container>
       <DateInput setDate={setDateInput} />
-
       <Image src={nasaData.url} alt="Pic of the Day" />
 
-      <TitleAndCopyright
-        title={nasaData.title}
-        copyright={nasaData.copyright}
-      />
+      <div style={{ marginTop: "5px" }}>
+        <Button onClick={toggle} style={{ marginBottom: "10px" }}>
+          More Info
+        </Button>
+        <Collapse isOpen={isOpen}>
+          <Card>
+            <CardBody>
+              <TitleAndCopyright
+                title={nasaData.title}
+                copyright={nasaData.copyright}
+              />
 
-      <Explanation explanation={nasaData.explanation} />
+              <Explanation explanation={nasaData.explanation} />
+            </CardBody>
+          </Card>
+        </Collapse>
+      </div>
+
+      <div></div>
     </Container>
   );
 };
